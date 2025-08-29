@@ -1,0 +1,11 @@
+<h2>All Students</h2>
+<ul>
+  {% for student in students %}
+    <li>
+      <a href="{% url 'student_detail' student.pk %}">
+        {{ student.name }} - {{ student.roll_no }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+<a href="{% url 'student_create' %}">Register New Student</a>
